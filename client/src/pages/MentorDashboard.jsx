@@ -7,6 +7,7 @@ import StatCard from '../components/ui/StatCard';
 import Modal from '../components/ui/Modal';
 import Button from '../components/ui/Button';
 import Avatar from '../components/ui/Avatar';
+import MentorAvailabilityCalendar from '../components/MentorAvailabilityCalendar';
 
 export default function MentorDashboard() {
   const { user, loading: authLoading, logout } = useAuth();
@@ -386,6 +387,10 @@ export default function MentorDashboard() {
               )}
             </Card>
           </div>
+        </div>
+
+        <div className="mt-6">
+          <MentorAvailabilityCalendar sessions={sessions} />
         </div>
       </div>
 
